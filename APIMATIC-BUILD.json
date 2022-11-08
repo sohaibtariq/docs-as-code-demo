@@ -8,13 +8,13 @@
         "pageTitle": "My Portal Title",
         "navTitle": "My Navigation Title",
         "logoUrl": "static/images/logo.png",
-        "logoLink": "https://www.payquicker.com",
+        "logoLink": "https://www.apimatic.io",
         "languageConfig": {
             "http": {},
             "java": {
                 "packageRepository": "Maven",
                 "packageSettings": {
-                    "GroupId": "com.payquicker",
+                    "GroupId": "com.apimatic",
                     "PackageName": "sample-sdk-artifact-id",
                     "Version": "1.0.0"
                 }
