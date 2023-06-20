@@ -30,7 +30,7 @@
             "required": true,
             "style": "simple",
             "schema": {
-              "$ref": "#/components/schemas/OperationType2"
+              "$ref": "#/components/schemas/OperationType"
             }
           },
           {
