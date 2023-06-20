@@ -16,7 +16,7 @@
                 "packageSettings": {
                     "GroupId": "com.apimatic",
                     "PackageName": "sample-sdk-artifact-id",
-                    "Version": ""
+                    "Version": "1.0.0"
                 }
             },
             "csharp": {},
