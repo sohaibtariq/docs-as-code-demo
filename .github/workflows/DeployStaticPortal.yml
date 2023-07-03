@@ -31,17 +31,10 @@ jobs:
         echo "HTTP_CODE=$HTTP_CODE" >> $GITHUB_OUTPUT;
         echo "CONTENT_TYPE=$CONTENT_TYPE" >> $GITHUB_OUTPUT;
 
-    - name: list 
-      run: ls
-      
     - name: Extract generated Portal
       if: ${{steps.generate-portal.outputs.HTTP_CODE == '200'}}
       run: unzip -qq portal.zip -d static-portal
       
-    - name: list 
-      run: ls
-      
-
     - name: Deploy to Netlify
       if: ${{steps.generate-portal.outputs.HTTP_CODE == '200'}}
       uses: nwtgck/actions-netlify@v1.2
