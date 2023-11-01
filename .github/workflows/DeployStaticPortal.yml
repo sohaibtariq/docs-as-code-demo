@@ -23,7 +23,7 @@ jobs:
     - name: Call build endpoint
       id: generate-portal
       run: | 
-        RESPONSE=`curl -s --write-out '%{http_code}\t%{content_type}' --request POST --url 'https://www.apimatic.io/api/portal' \
+        RESPONSE=`curl -s --write-out '%{http_code}\t%{content_type}' --request POST --url 'https://api.apimatic.io/portal' \
           -H 'Authorization:X-Auth-Key ${{ secrets.API_KEY }}' -F 'file=@portal-input.zip' -OJ`;
         
         HTTP_CODE=$(echo $RESPONSE | cut -d " " -f 1);
@@ -31,9 +31,15 @@ jobs:
         echo "HTTP_CODE=$HTTP_CODE" >> $GITHUB_OUTPUT;
         echo "CONTENT_TYPE=$CONTENT_TYPE" >> $GITHUB_OUTPUT;
 
+    - name: list
+      run: ls
+
     - name: Extract generated Portal
       if: ${{steps.generate-portal.outputs.HTTP_CODE == '200'}}
       run: unzip -qq portal.zip -d static-portal
+    
+    - name: list
+      run: ls
       
     - name: Deploy to Netlify
       if: ${{steps.generate-portal.outputs.HTTP_CODE == '200'}}
