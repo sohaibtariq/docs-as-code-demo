@@ -43,7 +43,7 @@ jobs:
       
     - name: Deploy to Netlify
       if: ${{steps.generate-portal.outputs.HTTP_CODE == '200'}}
-      uses: nwtgck/actions-netlify@v1.2
+      uses: nwtgck/actions-netlify@v2.0
       with:
         publish-dir: './static-portal'
         production-branch: master
