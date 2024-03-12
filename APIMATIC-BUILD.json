@@ -33,6 +33,7 @@
                     "primaryColor": "#94C13D"
                 }
             },
+            "enableExport": true,
             "enableConsoleCalls": true
         }
     }
