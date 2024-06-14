@@ -8,6 +8,7 @@
         "pageTitle": "My Portal Title",
         "navTitle": "My Navigation Title",
         "logoUrl": "static/images/logo.png",
+        "faviconUrl": "static/images/favicon.png",
         "logoLink": "https://www.apimatic.io",
         "languageConfig": {
             "http": {},
@@ -30,7 +31,7 @@
             "themeOverrides": {
                 "themeType": "cool",
                 "palette": {
-                    "primaryColor": "#94C13D"
+                    "primaryColor": "#0B72DA"
                 }
             },
             "enableExport": true,
