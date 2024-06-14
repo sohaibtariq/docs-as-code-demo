@@ -5,6 +5,10 @@ on:
   push:
     branches: 
       - main 
+      - dev 
+      - spec-updates 
+      - content-updates
+      - design-updates
       
 jobs:
   generate-portal:
